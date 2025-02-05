@@ -1,0 +1,44 @@
+# קבצים של Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# קבצים של .NET
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.config
+*.csproj.user
+
+# סביבת עבודה של VSCode
+.vscode/
+
+# קבצי build
+dist/
+out/
+build/
+
+# node_modules של צד ה-Client
+node_modules/
+
+# קבצים זמניים
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# קבצי מערכת של macOS / Windows
+.DS_Store
+Thumbs.db
+
+# קובצי Docker
+docker-compose.override.yml
+s
