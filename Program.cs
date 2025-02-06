@@ -15,11 +15,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowSpecific",
-                      policy  =>
+                    //   policy  =>
+                    //   {
+                    //       policy.AllowAnyOrigin()
+                    //              .AllowAnyHeader() 
+                    //              .AllowAnyMethod();   // מאפשר כל שיטת HTTP
+                    //   });
+                       policy =>
                       {
-                          policy.AllowAnyOrigin()
-                                 .AllowAnyHeader() 
-                                 .AllowAnyMethod();   // מאפשר כל שיטת HTTP
+                          policy.WithOrigins("https://todolistclient-19b1.onrender.com") // הוסף את הדומיין הספציפי של ה-React
+                                .AllowAnyHeader()
+                                .AllowAnyMethod(); // מאפשר כל שיטת HTTP
                       });
 });
 
