@@ -12,26 +12,15 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // הוספת Cors
-// builder.Services.AddCors(options =>
-// {
-//     options.AddPolicy("AllowSpecific",
-//                       policy  =>
-//                       {
-//                           policy.AllowAnyOrigin()
-//                                  .AllowAnyHeader() 
-//                                  .AllowAnyMethod();   // מאפשר כל שיטת HTTP
-//                       });
-// });
-
-// הוספת Cors
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowSpecific", policy =>
- {
-     policy.WithOrigins("https://todolistclient-19b1.onrender.com")
-           .AllowAnyHeader()
-           .AllowAnyMethod();
- });
+    options.AddPolicy("AllowSpecific",
+                      policy  =>
+                      {
+                          policy.AllowAnyOrigin()
+                                 .AllowAnyHeader() 
+                                 .AllowAnyMethod();   // מאפשר כל שיטת HTTP
+                      });
 });
 
 
